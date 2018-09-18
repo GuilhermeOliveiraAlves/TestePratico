@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.MovieDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/boxPoster">
+
+    <ImageView
+        android:id="@+id/imageview_details_backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/imageview_details_poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTitleMovie"
+        android:textColor="@color/colorText"
+        android:text=""
+        android:layout_toRightOf="@+id/imageview_details_poster"
+        android:layout_below="@id/imageview_details_backdrop"
+        android:layout_marginLeft="5dp"
+        android:textSize="24dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textAnoMovie"
+        android:text="2015"
+        android:textSize="20dp"
+        android:layout_below="@+id/textTitleMovie"
+        android:layout_marginLeft="5dp"
+        android:layout_alignLeft="@+id/textTitleMovie"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textTimeMovie"
+        android:text="120min"
+        android:textSize="14dp"
+        android:layout_below="@+id/textAnoMovie"
+        android:layout_marginLeft="5dp"
+        android:layout_alignLeft="@+id/textTitleMovie"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/textVoteAverageMovie"
+        android:text="9.9"
+        android:textSize="14dp"
+        android:layout_below="@+id/textTimeMovie"
+        android:layout_marginLeft="5dp"
+        android:layout_alignLeft="@+id/textTitleMovie"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/baseline_star_rate_white_18"
+        android:tint="@color/colorText"
+        android:layout_below="@+id/textTimeMovie"
+        android:layout_toRightOf="@+id/textVoteAverageMovie"
+        android:layout_marginLeft="5dp"/>
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/baseline_favorite_24"
+        android:backgroundTint="@color/colorAccent"
+        android:tint="@color/colorAccent"
+        android:layout_alignLeft="@+id/textTitleMovie"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textVoteAverageMovie"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="From the outer reaches of space to the small-town streets of suburbia, the hunt comes home. Now, the universe’s most lethal hunters are stronger, smarter and deadlier than ever before, having genetically upgraded themselves with DNA from other species. When a young boy accidentally triggers their return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race."
+        android:textSize="12dp"
+        android:id="@+id/textOverviewMovie"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/imageview_details_poster"
+
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewTrailers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_below="@+id/textOverviewMovie"
+        android:layout_marginTop="10dp">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
